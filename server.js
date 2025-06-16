@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
-});
+}); //! This is where I left off with this lecture/lab -- start here when come back & review entire lecture as well.
 
 
 
