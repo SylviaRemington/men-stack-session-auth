@@ -1,3 +1,7 @@
+// Name of file: men-stack-session-auth
+// Lecture code-along with notes about authorization
+// Lesson at: MEN Stack Session Auth in General Assembly - Modules - Unit 2
+
 const dotenv = require("dotenv"); //DOTENV
 dotenv.config();
 
