@@ -5,6 +5,11 @@ const router = express.Router();
 //Router is a piece of middleware.
 
 router.get('')
-//not typing fast enough
+router.get("/sign-up", (req, res) => {
+    res.send('sign up route');
+//   res.render("auth/sign-up.ejs");
+});
+
+
 
 module.exports = router; //exporting router from here
