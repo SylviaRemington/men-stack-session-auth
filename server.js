@@ -14,12 +14,12 @@ const methodOverride = require("method-override"); //METHOD-OVERRIDE
 
 const morgan = require("morgan"); //MORGAN
 
-const authRouter = require("./contro")//didn't complete this, not keeping up cause not typing fast enough.
+// const authRouter = require("./contro")//didn't complete this, not keeping up cause not typing fast enough.
 
 
 
 // Set the port from environment variable or default to 3000
-const port = process.env.PORT ? process.env.PORT : "3000";
+const port = process.env.PORT ? process.env.PORT : "3000"; //ternery statement
 
 
 
