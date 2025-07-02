@@ -15,7 +15,7 @@ const methodOverride = require("method-override"); //METHOD-OVERRIDE
 const morgan = require("morgan"); //MORGAN
 
 //auth router holds all the authorization endpoints
-const authRouter = require("./controllers/auth.js");
+const authController = require("./controllers/auth.js");
 
 
 
