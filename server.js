@@ -42,7 +42,7 @@ mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on("connected", () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
-}); //! This is where I left off with this lecture/lab -- start here when come back & review entire lecture as well.
+}); 
 
 
 
@@ -52,6 +52,8 @@ app.use(express.urlencoded({ extended: false })); // so we can use query strings
 app.use(methodOverride("_method")); // method override so I can do PUT and DELETE requests
 // Morgan for logging HTTP requests
 app.use(morgan('dev')); // morgan for logging
+
+app.use("/auth", authController); //invoke auth here
 
 // ROUTES
 
