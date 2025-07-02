@@ -56,7 +56,7 @@ app.use(morgan('dev')); // morgan for logging
 
 // GET /
 app.get("/", async (req, res) => {
-  res.send("hello, friend!");
+  res.render("index.ejs");
 });
 
 
