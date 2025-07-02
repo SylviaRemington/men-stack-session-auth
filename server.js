@@ -52,6 +52,12 @@ app.use(methodOverride("_method")); // method override so I can do PUT and DELET
 // Morgan for logging HTTP requests
 app.use(morgan('dev')); // morgan for logging
 
+// ROUTES
+
+// GET /
+app.get("/", async (req, res) => {
+  res.send("hello, friend!");
+});
 
 
 
