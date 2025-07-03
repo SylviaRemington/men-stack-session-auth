@@ -54,6 +54,8 @@ router.get("/sign-in", (req, res) => {
 });
 // localhost:3000/auth/sign-in
 
-
+router.post("/sign-in", (req, res) => {
+  res.send("User is trying to sign in.");
+});
 
 module.exports = router; //exporting router from here
