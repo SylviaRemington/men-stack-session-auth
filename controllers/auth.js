@@ -7,6 +7,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require("../models/user.js"); //import our models
 
+// SIGN-UP ROUTE
 router.get("/sign-up", (req, res) => {
     res.render("auth/sign-up.ejs");
 });
@@ -46,5 +47,13 @@ router.post("/sign-up", async (req, res) => {
     res.send(`Thanks for signing up ${user.username}!`);
 
 });
+
+// SIGN-IN ROUTE
+router.get("/sign-in", (req, res) => {
+  res.render("auth/sign-in.ejs");
+});
+// localhost:3000/auth/sign-in
+
+
 
 module.exports = router; //exporting router from here
