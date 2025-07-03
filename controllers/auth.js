@@ -9,4 +9,8 @@ router.get("/sign-up", (req, res) => {
 });
 // localhost:3000/auth/sign-up
 
+router.post("/sign-up", (req, res) => {
+    res.send("submitted the form to create a new user");
+});
+
 module.exports = router; //exporting router from here
