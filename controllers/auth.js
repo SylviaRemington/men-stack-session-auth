@@ -4,6 +4,8 @@ const router = express.Router();
 //Will be moving a lot of the app.gets into the Router and out of the server.js
 //Router is a piece of middleware.
 
+const User = require("../models/user.js"); //import our models
+
 router.get("/sign-up", (req, res) => {
     res.render("auth/sign-up.ejs");
 });
