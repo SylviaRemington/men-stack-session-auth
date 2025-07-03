@@ -36,7 +36,6 @@ if (process.env.PORT) {
 */
 
 
-
 // Connecting Mongoose to MongoDB Database
 mongoose.connect(process.env.MONGODB_URI);
 
