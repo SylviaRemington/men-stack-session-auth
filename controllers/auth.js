@@ -5,8 +5,7 @@ const router = express.Router();
 //Router is a piece of middleware.
 
 router.get("/sign-up", (req, res) => {
-    res.send('sign up route');
-//   res.render("auth/sign-up.ejs");
+    res.render("auth/sign-up.ejs");
 });
 // localhost:3000/auth/sign-up
 
