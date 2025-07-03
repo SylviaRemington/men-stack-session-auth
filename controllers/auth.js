@@ -54,8 +54,30 @@ router.get("/sign-in", (req, res) => {
 });
 // localhost:3000/auth/sign-in
 
-router.post("/sign-in", (req, res) => {
-  res.send("User is trying to sign in.");
+router.post("/sign-in", async (req, res) => {
+    // res.send("User is trying to sign in."); // tested to make sure it functions
+    
+    // Now need to create the logic to make sure user exists
+    // We have to get the user before we check that password.
+    const userInDatabase = await User.findOne({username: req.body.username});
+
+    // if no user in database
+    if (!userInDatabase) {
+        return res.send('Login failed. Please try again.');
+    }
+
+    const validPassword = bcrypt.compareSync(
+        req.body.password, //the password the user put in
+        userInDatabase.password
+    ); //the encrypted version of that password
+        //Salting is how difficult it should be to decryp password: level 1 or 2 or 10?
+    
+    if (!validPassword) {
+        return res.send('Login failed. Please try again.');
+    }
+
+    res.send('Welcome to the Kind Up Movement! We are so happy you are here, creating change on the planet!');
+
 });
 
 module.exports = router; //exporting router from here
