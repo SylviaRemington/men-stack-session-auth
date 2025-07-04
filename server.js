@@ -66,8 +66,12 @@ app.use("/auth", authController); //invoke auth here
 // ROUTES
 
 // GET /
-app.get("/", async (req, res) => {
-  res.render("index.ejs");
+app.get('/', async (req, res) => {
+    // res.send('Hello, friend! This will be our homepage once it has been set up!');
+    res.render('index.ejs', {
+      //modifying the landing page & index route by adding a user object
+      user: req.session.user,
+    }); 
 });
 
 
