@@ -44,10 +44,22 @@ mongoose.connection.on("connected", () => {
 
 // Middleware to parse URL-encoded data from forms
 app.use(express.urlencoded({ extended: false })); // so we can use query strings and req.body
+
 // Middleware for using HTTP verbs such as PUT or DELETE
 app.use(methodOverride("_method")); // method override so I can do PUT and DELETE requests
+
 // Morgan for logging HTTP requests
 app.use(morgan('dev')); // morgan for logging
+
+//Express-Session Module in the middleware
+//Need to check authentication before we go into any controllers - so putting above controllers
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 app.use("/auth", authController); //invoke auth here
 
