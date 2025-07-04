@@ -4,15 +4,12 @@
 
 const dotenv = require("dotenv"); //DOTENV
 dotenv.config();
-
 const express = require("express"); //EXPRESS
 const app = express();
-
 const mongoose = require("mongoose"); //MONGOOSE
-
 const methodOverride = require("method-override"); //METHOD-OVERRIDE
-
 const morgan = require("morgan"); //MORGAN
+const session = require('express-session'); //express-session
 
 //auth router holds all the authorization endpoints
 const authController = require("./controllers/auth.js");
