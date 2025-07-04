@@ -92,5 +92,15 @@ router.post("/sign-in", async (req, res) => {
 
 });
 
+// CREATING A SIGN-OUT ROUTE - defining the sign-out route
+// MAKING SURE ROUTE WORKS FIRST - below
+// router.get('/sign-out', (req, res) => {
+//     res.send('Sign-Out Page');
+// });
+router.get('/sign-out', (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+});
+
 
 module.exports = router; //exporting router from here
