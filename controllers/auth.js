@@ -76,7 +76,13 @@ router.post("/sign-in", async (req, res) => {
         return res.send('Login failed. Please try again.');
     }
 
-    res.send('Welcome to the Kind Up Movement! We are so happy you are here, creating change on the planet!');
+    req.session.user = {
+        username: userInDatabase.username,
+    };
+
+    // res.send('Welcome to the Kind Up Movement! We are so happy you are here, creating change on the planet!');
+    
+    res.redirect('/');
 
 });
 
