@@ -1,4 +1,4 @@
-// Name of file: men-stack-session-auth
+// MEN STACK SESSION AUTH
 // Lecture code-along with notes about authorization
 // Lesson at: MEN Stack Session Auth in General Assembly - Modules - Unit 2 - June 12th, 2025
 
